@@ -1,15 +1,20 @@
 /*
  * AUTHOR: KOUSHAL JHA (CHIEF ARCHITECT)
- * VERSION: 0.0.1 (ORGANIC BUILD)
+ * VERSION: 0.0.3 (LEAST PRIVILEGE REPAIR)
  * CLASSIFICATION: PROPRIETARY & CONFIDENTIAL
  */
 
-# SYSTEM ARTIFACTS (NODE-SPECIFIC)
-!.gitignore
+# SYSTEM ARTIFACTS
 .DS_Store
 Thumbs.db
+*.log
 
 # LOCAL ENVIRONMENT (Rule 6.1)
-# Do not sync local signatures or secrets between Laptop A and B.
+# We exclude these because they contain hardware-specific signatures.
 .env
 .env.local
+.env.*.local
+
+# IDE / EDITOR
+.vscode/
+.idea/
