@@ -1,0 +1,44 @@
+/*
+ * AUTHOR: KOUSHAL JHA (CHIEF ARCHITECT)
+ * VERSION: 0.0.4 (INFRASTRUCTURE CONSTITUTION - VAULT DOMAIN)
+ * CLASSIFICATION: CORPORATE ASSET / RESTRICTED ACCESS
+ * ==============================================================================
+ */
+
+1. ARCHITECTURAL INVARIANTS
+--------------------------------------------------------------------------------
+- SSOT (Single Source of Truth): The Vault is the final arbiter of state. 
+- ZERO-KNOWLEDGE: All sensitive vectors must be hashed/encrypted before I/O.
+- ATOMIC LEDGERING: Every write must include a 'Shadow Ledger' entry.
+
+2. CRYPTOGRAPHIC & HARDWARE ANCHORS
+--------------------------------------------------------------------------------
+- NODE VALIDATION: Access requires SHA-256 HMAC of KOSHIV_MACHINE_SIGNATURE.
+- TRANSPORT: Mandatory TLS 1.3 for all inter-service communication.
+
+3. OPERATIONAL SLOs (SERVICE LEVEL OBJECTIVES)
+--------------------------------------------------------------------------------
+- READ LATENCY: p95 < 50ms for indexed lookups.
+- WRITE LATENCY: p99 < 150ms (including Shadow Ledger overhead).
+- AVAILABILITY: 99.99% via Master-Replica (Node A/B) failover topology.
+
+4. TAXONOMY & HIERARCHY
+--------------------------------------------------------------------------------
+/persistence-vault/
+├── /schema/            # Relational DDL (PostgreSQL 16.x)
+├── /logic/             # Immutable Triggers & Procedural Guards
+├── /security/          # Identity Access Control & RLS Policies
+├── /migrations/        # Sequential, Idempotent Delta Scripts
+└── /telemetry/         # X-Trace-ID Log aggregation
+
+5. DATA GOVERNANCE
+--------------------------------------------------------------------------------
+- LOGICAL DELETION: Hard-deletion is strictly prohibited.
+- AUDIT DEPTH: Every 'UPDATE' must capture the JSON diff for reconstruction.
+
+6. VERSION LEDGER
+--------------------------------------------------------------------------------
+0.0.1 - 0.0.3 | Initial drafting and terminal standardization.
+0.0.4 | 2026-01-18 | Finalized Master Engineering Spec; ready for Git Genesis.
+================================================================================
+EOF
