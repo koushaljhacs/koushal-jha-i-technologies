@@ -48,3 +48,4 @@
                 | 'hardware_anchor_registry' table. SSOT Established.
 ================================================================================
 EOF
+
