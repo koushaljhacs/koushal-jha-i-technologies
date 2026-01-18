@@ -1,6 +1,9 @@
 /*
+ * PROJECT: Koushal Jha i Technologies
  * AUTHOR: KOUSHAL JHA (CHIEF ARCHITECT)
- * VERSION: 0.0.4 (INFRASTRUCTURE CONSTITUTION - VAULT DOMAIN)
+ * FILE: LOCAL_MANIFEST.txt
+ * LOCATION: D:\koushal-jha-i-technologies\persistence-vault\
+ * VERSION: 0.0.5 (SILICON_ANCHOR_PHASE)
  * CLASSIFICATION: CORPORATE ASSET / RESTRICTED ACCESS
  * ==============================================================================
  */
@@ -25,7 +28,7 @@
 4. TAXONOMY & HIERARCHY
 --------------------------------------------------------------------------------
 /persistence-vault/
-├── /schema/            # Relational DDL (PostgreSQL 16.x)
+├── /schema/            # Relational DDL (PostgreSQL 17.x)
 ├── /logic/             # Immutable Triggers & Procedural Guards
 ├── /security/          # Identity Access Control & RLS Policies
 ├── /migrations/        # Sequential, Idempotent Delta Scripts
@@ -40,5 +43,8 @@
 --------------------------------------------------------------------------------
 0.0.1 - 0.0.3 | Initial drafting and terminal standardization.
 0.0.4 | 2026-01-18 | Finalized Master Engineering Spec; ready for Git Genesis.
+0.0.5 | 2026-01-18 | SILICON ANCHOR DEPLOYED: Database 'kti_persistence_vault' initialized.
+                | Hardware signatures for Laptop A and Laptop B bound via 
+                | 'hardware_anchor_registry' table. SSOT Established.
 ================================================================================
 EOF

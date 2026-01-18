@@ -1,9 +1,18 @@
+/*
+ * PROJECT: Koushal Jha i Technologies
+ * AUTHOR: KOUSHAL JHA (CHIEF ARCHITECT)
+ * FILE: README.md
+ * LOCATION: D:\koushal-jha-i-technologies\
+ * VERSION: 0.0.5 (SILICON_ANCHOR_PHASE)
+ * CLASSIFICATION: PROPRIETARY & CONFIDENTIAL
+ */
+
 # ==============================================================================
 # SECTION 1: MASTER NODE PROVISIONING [TARGET: PROJECT ROOT]
 # FILE PATH: D:\koushal-jha-i-technologies\README.md
 # ==============================================================================
 
-# KOSHIV TECHNOPOLIS | SYSTEM ENGINEERING SPECIFICATION
+# Koushal Jha i Technologies | SYSTEM ENGINEERING SPECIFICATION
 **PROJECT:** PERSISTENCE VAULT | **VERSION:** 0.0.5 | **STATUS:** SILICON_SEAL
 
 ---
@@ -41,3 +50,9 @@
 **Phone:** +91 8298163299 | **Email:** koushaljha.cs@gmail.com
 
 ---
+
+## PHASE 0.0.5 STATUS: ACTIVE
+- **Database:** `kti_persistence_vault` (PostgreSQL 17.x)
+- **Security:** Hardware Anchoring enabled.
+- **Authorized Nodes:** Laptop A (Master), Laptop B (Workstation).
+- **Core Table:** `hardware_anchor_registry` (ID, Node_Name, Silicon_Signature, Authorized_At, Is_Active)

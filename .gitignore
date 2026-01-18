@@ -1,6 +1,9 @@
 /*
+ * PROJECT: Koushal Jha i Technologies
  * AUTHOR: KOUSHAL JHA (CHIEF ARCHITECT)
- * VERSION: 0.0.3 (LEAST PRIVILEGE REPAIR)
+ * FILE: .gitignore
+ * LOCATION: D:\koushal-jha-i-technologies\
+ * VERSION: 0.0.5 (SILICON_ANCHOR_PHASE)
  * CLASSIFICATION: PROPRIETARY & CONFIDENTIAL
  */
 
@@ -10,7 +13,6 @@ Thumbs.db
 *.log
 
 # LOCAL ENVIRONMENT (Rule 6.1)
-# We exclude these because they contain hardware-specific signatures.
 .env
 .env.local
 .env.*.local
@@ -18,3 +20,9 @@ Thumbs.db
 # IDE / EDITOR
 .vscode/
 .idea/
+
+# --- APPENDED v0.0.5 ---
+# DATABASE ARTIFACTS
+*.sql.gz
+*.backup
+*.session

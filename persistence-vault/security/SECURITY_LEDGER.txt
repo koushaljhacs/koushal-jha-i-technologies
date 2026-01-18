@@ -1,27 +1,50 @@
-# SECTION 2: VAULT SECURITY LEDGER [TARGET: SECURITY FOLDER]
-# FILE PATH: D:\koushal-jha-i-technologies\persistence-vault\security\SECURITY_LEDGER.txt
-# ==============================================================================
+/*
+ * PROJECT: Koushal Jha i Technologies
+ * AUTHOR: KOUSHAL JHA (CHIEF ARCHITECT)
+ * FILE: SECURITY_LEDGER.txt
+ * LOCATION: D:\koushal-jha-i-technologies\persistence-vault\security\
+ * VERSION: 0.0.5 (SILICON_ANCHOR_PHASE)
+ * CLASSIFICATION: CORPORATE ASSET / RESTRICTED ACCESS
+ * ==============================================================================
+ */
 
+1. ARCHITECTURAL INVARIANTS
+--------------------------------------------------------------------------------
+- SSOT (Single Source of Truth): The Vault is the final arbiter of state. 
+- ZERO-KNOWLEDGE: All sensitive vectors must be hashed/encrypted before I/O.
+- ATOMIC LEDGERING: Every write must include a 'Shadow Ledger' entry.
+
+2. CRYPTOGRAPHIC & HARDWARE ANCHORS
+--------------------------------------------------------------------------------
+- NODE VALIDATION: Access requires SHA-256 HMAC of KOSHIV_MACHINE_SIGNATURE.
+- TRANSPORT: Mandatory TLS 1.3 for all inter-service communication.
+
+3. OPERATIONAL SLOs (SERVICE LEVEL OBJECTIVES)
+--------------------------------------------------------------------------------
+- READ LATENCY: p95 < 50ms for indexed lookups.
+- WRITE LATENCY: p99 < 150ms (including Shadow Ledger overhead).
+- AVAILABILITY: 99.99% via Master-Replica (Node A/B) failover topology.
+
+4. TAXONOMY & HIERARCHY
+--------------------------------------------------------------------------------
+/persistence-vault/
+├── /schema/            # Relational DDL (PostgreSQL 17.x)
+├── /logic/             # Immutable Triggers & Procedural Guards
+├── /security/          # Identity Access Control & RLS Policies
+├── /migrations/        # Sequential, Idempotent Delta Scripts
+└── /telemetry/         # X-Trace-ID Log aggregation
+
+5. DATA GOVERNANCE
+--------------------------------------------------------------------------------
+- LOGICAL DELETION: Hard-deletion is strictly prohibited.
+- AUDIT DEPTH: Every 'UPDATE' must capture the JSON diff for reconstruction.
+
+6. VERSION LEDGER
+--------------------------------------------------------------------------------
+0.0.1 - 0.0.3 | Initial drafting and terminal standardization.
+0.0.4 | 2026-01-18 | Finalized Master Engineering Spec; ready for Git Genesis.
+0.0.5 | 2026-01-18 | SILICON ANCHOR DEPLOYED: Database 'kti_persistence_vault' initialized.
+                | Hardware signatures for Laptop A and Laptop B bound via 
+                | 'hardware_anchor_registry' table. SSOT Established.
 ================================================================================
-KOSHIV TECHNOPOLIS - SECURITY_LEDGER.txt | v1.3.0 | ARCHITECT-EYES-ONLY
-================================================================================
-
-[01. PROTOCOL DEFINITION]
-The identity_provider.py script acts as the cryptographic gatekeeper.
-It entangles four hardware layers into a single SHA-256 HMAC:
-1. SILICON: Motherboard UUID (CIM Instance)
-2. STORAGE: Physical Media Serial (Disk)
-3. MEMORY: Byte-count Entropy (RAM)
-4. LOGIC: Volume Serial Number (C:)
-
-[02. ENVIRONMENT SYNC & ERROR HANDLING]
-- ERROR: ModuleNotFoundError -> FIX: python -m pip install psutil
-- ERROR: Pathing/Vim Lock -> FIX: Esc + :wq + Enter
-- ERROR: OS Deprecation -> FIX: PowerShell Get-CimInstance (v1.3.0)
-
-[03. CONTACT & GOVERNANCE]
-Koushal Jha | +91 8298163299 | koushaljha.cs@gmail.com
-================================================================================
-# ==============================================================================
-# END OF UNIFIED DEPLOYMENT BLOCK
-# ==============================================================================
+EOF
