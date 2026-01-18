@@ -1,0 +1,27 @@
+# SECTION 2: VAULT SECURITY LEDGER [TARGET: SECURITY FOLDER]
+# FILE PATH: D:\koushal-jha-i-technologies\persistence-vault\security\SECURITY_LEDGER.txt
+# ==============================================================================
+
+================================================================================
+KOSHIV TECHNOPOLIS - SECURITY_LEDGER.txt | v1.3.0 | ARCHITECT-EYES-ONLY
+================================================================================
+
+[01. PROTOCOL DEFINITION]
+The identity_provider.py script acts as the cryptographic gatekeeper.
+It entangles four hardware layers into a single SHA-256 HMAC:
+1. SILICON: Motherboard UUID (CIM Instance)
+2. STORAGE: Physical Media Serial (Disk)
+3. MEMORY: Byte-count Entropy (RAM)
+4. LOGIC: Volume Serial Number (C:)
+
+[02. ENVIRONMENT SYNC & ERROR HANDLING]
+- ERROR: ModuleNotFoundError -> FIX: python -m pip install psutil
+- ERROR: Pathing/Vim Lock -> FIX: Esc + :wq + Enter
+- ERROR: OS Deprecation -> FIX: PowerShell Get-CimInstance (v1.3.0)
+
+[03. CONTACT & GOVERNANCE]
+Koushal Jha | +91 8298163299 | koushaljha.cs@gmail.com
+================================================================================
+# ==============================================================================
+# END OF UNIFIED DEPLOYMENT BLOCK
+# ==============================================================================
