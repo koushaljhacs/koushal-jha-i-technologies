@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS hardware_anchor_registry (
 INSERT INTO hardware_anchor_registry (node_name, silicon_signature)
 VALUES 
 ('LAPTOP_A_MASTER', '5a9a513cceb1e9433c0ce5d0c7c13b9c46219d988006be8dca45b05e1357ae1b'),
-('LAPTOP_B_MASTER', 'PENDING_V1.3.0_SIGNATURE_FROM_LAPTOP_B')
+('LAPTOP_B_MASTER', 'b92a13243fbd1fd4611044ffb11b9b9c338dd30eea450354901e38b2b9c110f5')
 ON CONFLICT (node_name) DO UPDATE 
 SET silicon_signature = EXCLUDED.silicon_signature;
 
