@@ -3,7 +3,7 @@
  * AUTHOR: KOUSHAL JHA (CHIEF ARCHITECT)
  * FILE: SECURITY_LEDGER.txt
  * LOCATION: D:\koushal-jha-i-technologies\persistence-vault\security\
- * VERSION: 0.0.5 (SILICON_ANCHOR_PHASE)
+ * VERSION: 0.0.6.0.0
  * CLASSIFICATION: CORPORATE ASSET / RESTRICTED ACCESS
  * ==============================================================================
  */
@@ -46,5 +46,9 @@
 0.0.5 | 2026-01-18 | SILICON ANCHOR DEPLOYED: Database 'kti_persistence_vault' initialized.
                 | Hardware signatures for Laptop A and Laptop B bound via 
                 | 'hardware_anchor_registry' table. SSOT Established.
+0.0.6 | 2026-01-19 | HANDSHAKE VERIFIED (v1.3.0): Deployed Deep Entanglement logic 
+                | via PowerShell Backend. Hybrid Failover active: Peer node
+                | (Laptop B) successfully authorized via Laptop A Vault using 
+                | multi-pathing (Host-Only/Wi-Fi). Infrastructure secured.
 ================================================================================
 EOF
