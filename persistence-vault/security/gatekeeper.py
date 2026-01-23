@@ -34,7 +34,7 @@ class VaultGatekeeper:
         self.__MASTER_SIGNATURE = "26d0a47eb5b79e1e46d46eba4e67dc8ab585f304bd93563c980e348cbabff544"
         
         # Rule 11.2: Hybrid Failover Pathing (Static Bridge + Active Wi-Fi)
-        self.__MASTER_HOSTS = ["192.168.56.1", "10.194.170.112"] 
+        self.__MASTER_HOSTS = ["192.168.56.1", "10.194.170.112", "10.200.122.112"] 
         
         self.__vault_port = "5432"
         self.__vault_db = "kti_persistence_vault"
